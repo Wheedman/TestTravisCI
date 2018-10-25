@@ -21,7 +21,7 @@ namespace NUnitTest
         [Test]
         public void CalculationTest2()
         {
-            Assert.AreEqual(program.multiplication(1, 2), 4);
+            Assert.AreEqual(program.multiplication(2, 2), 4);
         }
     }
 }
