@@ -1,13 +1,11 @@
 language: csharp
 solution: TravisCI.sln
- 
 install:
-  - nuget restore TravisCI.sln
+  - nuget restore solution-name.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release solution-name.sln
+  - xbuild /p:Configuration=Release TravisCI.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./NUnitTest/bin/Release/NUnitTest.dll
-
-  notifications:
+notifications:
     slack: traviscitest:gUIyWdfEWDjc7x88yDTu6aqZ
     on_success: always
