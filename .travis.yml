@@ -1,11 +1,14 @@
 language: csharp
 solution: TravisCI.sln
+script:
+  - xbuild /p:Configuration=Debug TravisCI.sln
 before_install:
   - sudo apt-get install nunit-console
 before_script:
   - nuget restore TravisCI.sln
 after_script:
-- nunit-console NUnitTest/bin/Debug/NUnitTest.dll
+  - nunit-console NUnitTest/bin/Debug/NUnitTest.dll
+
   notifications:
     slack: traviscitest:gUIyWdfEWDjc7x88yDTu6aqZ
     on_success: always
