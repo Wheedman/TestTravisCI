@@ -2,3 +2,4 @@ language: csharp
 solution: TravisCI.sln
 notifications:
     slack: traviscitest:gUIyWdfEWDjc7x88yDTu6aqZ
+    on_success: always
