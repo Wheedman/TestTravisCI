@@ -14,5 +14,10 @@ namespace UnitTestProject1
         {
             Assert.AreEqual(program.multiplication(1, 2), 2);
         }
+
+        public void TestMethod2()
+        {
+            Assert.AreEqual(program.multiplication(1, 2), 3);
+        }
     }
 }
