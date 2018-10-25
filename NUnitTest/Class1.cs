@@ -18,6 +18,7 @@ namespace NUnitTest
             Assert.AreEqual(program.multiplication(1, 2), 2);
         }
 
+        [Test]
         public void CalculationTest2()
         {
             Assert.AreEqual(program.multiplication(1, 2), 4);
